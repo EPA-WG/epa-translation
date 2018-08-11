@@ -1,0 +1,43 @@
+body {
+  background-image: url(../images/body_bg1.png);  background-repeat: repeat;
+  font-family: Open Sans, sans-serif;
+}
+body #color a {
+  font-family: Open Sans, sans-serif;
+  text-decoration: none;
+}
+body #color a:hover {
+  text-decoration: none;
+}
+#color #main-navbar-collapse li a {
+  font-family: Open Sans, sans-serif;
+  text-decoration: none;
+}
+#color #main-navbar-collapse li a:hover {
+  text-decoration: none;
+}
+#footer a {
+  font-family: Open Sans, sans-serif;
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-family: Open Sans, sans-serif!important;
+}
+h2 {
+  font-family: Open Sans, sans-serif!important;
+}
+h3 {
+  font-family: Open Sans, sans-serif!important;
+}
+h4 {
+  font-family: Open Sans, sans-serif!important;
+}
+h5 {
+  font-family: Open Sans, sans-serif!important;
+}
+h6 {
+  font-family: Open Sans, sans-serif!important;
+}
