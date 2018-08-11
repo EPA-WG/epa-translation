@@ -1,8 +1,13 @@
 # epa-translation
-in-browser runtime `translation integration` and `inline translation editor` microapplications
+Provides support for multiple languages on site. Anyone could make own translation by changing the page text inline 
+and share with friends. 
+ 
+Project comprise in-browser runtime `translation integration` and `inline vocabulary editor` 
+[microapplications](https://github.com/EPA-WG/EPA-concept/blob/master/microapplication.md)
 
 # Integration into web application
-The client would need to include `syndication.js` (CDN tbd) into page or use Browser plugin(tbd).
+The web page would need to include `epa-translation.js` (CDN tbd) into page, or use Browser plugin(tbd)
+, or via bookmarklet(link TBD).
 
 ## Features
 * detection of browser locale and use one+ vocabulary 
@@ -13,7 +18,7 @@ substituting the original text from selected vocabulary(-ies)
 
 # Editor
 Loaded on demand only. The `translation integration` client on *"enable inline translation editor"* trigger will 
-pull `inline translation editor` microapplication into host application content. 
+pull `inline vocabulary editor` microapplication into host application content. 
 
 ## Edit mode
 Could be triggered by
