@@ -1,6 +1,7 @@
 # epa-translation
 Provides support for multiple languages on site. Anyone could make own translation by changing the page text inline 
-and share with friends. 
+and share with friends. This way the community driven translations of web application will extend the application 
+audience beyond of initially targeted countries and lingual dialects.
  
 Project comprise in-browser runtime `translation integration` and `inline vocabulary editor` 
 [microapplications](https://github.com/EPA-WG/EPA-concept/blob/master/microapplication.md)

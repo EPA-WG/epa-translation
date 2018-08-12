@@ -1,11 +1,19 @@
 <html>
 <body>
-
+<epa-translation></epa-translation>
 <h1>H1 element      </h1>
 <div>div element    </div>
 <div>text out <span>IN SPAN</span> another outer</div>
 <script type="module" src="../epa-translation.js"></script>
 <pre>
+To start translation editor
+    1. Trigger "Translation editor mode"
+    2. Click on text to edit. The cursor should appear. Type the change.
+    3. The translated text is preserved in localStorage
+    4. TODO Text in another browser window will be synchronously changed.
+    5. TODO The translation saved to cloud
+
+TODO
 * samples with different frameworks
 ** Polymer
 ** ReactXXX
@@ -21,6 +29,11 @@ Embedding samples
     <style>
         iframe{ width: 45%; height: 50em; margin: 0;padding: 0;}
     </style>
+    <p>
+        IFRAMEs as a sample of drupal generated content with epa-translation as SCRIPT.
+        When content is translated in one, the matching text is updated in another. The page translation will be persisted
+        after browser refresh.
+    </p>
     <iframe src="ARE/Home%20_%20Aviation%20Real%20Estate.html"></iframe>
     <iframe src="ARE/Home%20_%20Aviation%20Real%20Estate.html"></iframe>
 </div>

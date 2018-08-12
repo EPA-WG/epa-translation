@@ -7,11 +7,13 @@
 
         const scopeSelector = "epa-translation"
         ,  $conf = getConfigNode()
-        ,    css = `    form>*{ display:block }
+        ,    css = `    
+                        form>*{ display:block }
                         
                    `.split('\n').map( s => s.trim() && `${scopeSelector} ${s}` ).join('\n')
         ,   html = `<style> *[contentEditable]{background-color:aqua}
                             *[contentEditable]:focus{background-color:aquamarine}
+                            #epa-translation-visibility{ display:none; }
                             ${css}
                     </style>
                     <input type="checkbox" id="epa-translation-visibility" />
