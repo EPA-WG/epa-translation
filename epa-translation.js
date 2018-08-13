@@ -9,7 +9,9 @@
         ,  $conf = getConfigNode()
         ,    css = `    { position:absolute; right:1em; top:0; text-align:right; z-index:10; }
                         form,
-                        #epa-translation-visibility{ display:none; }
+                        #epa-translation-visibility,
+                        .epa-translation-edit span{ display:none; }
+                        .epa-translation-edit input:checked ~span,
                         #epa-translation-visibility:checked ~form { display:block; }
                         form,
                         >label{background-color: white; margin:0; padding: 0.5em; }
@@ -28,9 +30,12 @@
                         <label 
                             class="epa-translation-edit"
                             accesskey="t" 
-                    title="Trigger Translation Editor mode
-                    ALT+T or CTRL+ALT+T"
-                        ><input type="checkbox"/> <u><b>T</b></u>ranslation editor mode </label>
+                            title="Trigger Translation Editor mode
+                            ALT+T or CTRL+ALT+T"
+                        ><input type="checkbox"/> <u><b>T</b></u>ranslation editor mode 
+                            <span>Click two times on text for translation to get a cursor. </span>
+                        </label>
+                        
                         <label class="epa-trans-props-lang"> Language <input type="text" value="unknown"/></label>
                         <label class="epa-trans-props-dict"> Dictionary URL <input type="text" placeholder="" /></label>
                     </form>
