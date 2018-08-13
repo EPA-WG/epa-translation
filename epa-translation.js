@@ -7,15 +7,19 @@
 
         const scopeSelector = "epa-translation"
         ,  $conf = getConfigNode()
-        ,    css = `    
-                        form>*{ display:block }
-                        
+        ,    css = `    { position:absolute; right:1em; top:0; text-align:right; z-index:10; }
+                        form,
+                        #epa-translation-visibility{ display:none; }
+                        #epa-translation-visibility:checked ~form { display:block; }
+                        form,
+                        >label{background-color: white; margin:0; padding: 0.5em; }
+                        form{ border: 2px silver solid; border-radius: 0.2em;  }
+                        form>label{display:block;}
                    `.split('\n').map( s => s.trim() && `${scopeSelector} ${s}` ).join('\n')
         ,   html = `<style> *[contentEditable=true],
                             *[contentEditable=true] *[contentEditable=false]{background-color:aqua}
                             *[contentEditable=true]:focus{background-color:aquamarine}
                             /**[contentEditable=false] *:focus{background-color:aquamarine}*/
-                            #epa-translation-visibility{ display:none; }
                             ${css}
                     </style>
                     <input type="checkbox" id="epa-translation-visibility" />
@@ -47,7 +51,8 @@
         clickInEditMode(ev)
         {
             let el = ev.target;
-            el !== editedEl && clearContentEditable( editedEl );
+            const elChanged = el !== editedEl;
+            elChanged && clearContentEditable( editedEl );
             editedEl = el;
             let t = el.origText;
             if( !t )
@@ -59,6 +64,8 @@
             while( el = el.parentNode )
                 if( el.isContentEditable )
                     el.contentEditable = "false";
+            // if( elChanged )
+            //     ev.preventDefault();
         }
             function
         inputInEditMode(ev)
